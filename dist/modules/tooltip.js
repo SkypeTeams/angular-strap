@@ -1,6 +1,6 @@
 /**
  * angular-strap
- * @version v2.3.9 - 2016-06-10
+ * @version v2.3.9 - 2016-08-27
  * @link http://mgcrea.github.io/angular-strap
  * @author Olivier Louvignes <olivier@mg-crea.com> (https://github.com/mgcrea)
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -180,13 +180,13 @@ angular.module('mgcrea.ngStrap.tooltip', [ 'mgcrea.ngStrap.core', 'mgcrea.ngStra
           if (tipElement) tipElement.css({
             visibility: 'visible'
           });
-          if (options.keyboard) {
-            if (options.trigger !== 'focus') {
-              $tooltip.focus();
-            }
-            bindKeyboardEvents();
-          }
         });
+        if (options.keyboard) {
+          if (options.trigger !== 'focus') {
+            $tooltip.focus();
+          }
+          bindKeyboardEvents();
+        }
         if (options.autoClose) {
           bindAutoCloseEvents();
         }
